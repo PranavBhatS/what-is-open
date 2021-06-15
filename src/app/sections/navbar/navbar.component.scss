@@ -1,0 +1,42 @@
+#navbar {
+  overflow: hidden;
+  background-color: transparent;
+  transition: 2.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  #navbar-right {
+    margin-right: 12rem;
+    .actions {
+      display: inline-block;
+      margin-left: 4rem;
+    }
+  }
+  .links {
+    color: black;
+    text-align: center;
+    padding: 0px 1rem;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+  #logo {
+    height: 12.5rem;
+    transition: 0.4s;
+    padding-left: 12rem;
+  }
+
+}
+.expand-navbar {
+  background-color: #fff !important;
+  box-shadow: 0px 0px 20px #00000033;
+  #logo {
+    height: 7rem !important;
+  }
+}

@@ -1,0 +1,28 @@
+.button {
+  border: none;
+  padding: 1rem 3rem;
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 2.4rem;
+  line-height: 2.4rem;
+  letter-spacing: .5px;
+  &--primary {
+    // background-image: linear-gradient(to right, #9f62c9 0%, #663399 100%);
+    background: transparent linear-gradient(90deg, #9f62c9 0%, #663399 100%) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    color: #fff;
+
+    box-shadow: 0px 0px 20px #00000033;
+  }
+  &--secondary {
+    border: 2px #663399 solid;
+    color: #663399;
+    background-color: transparent;
+  }
+}

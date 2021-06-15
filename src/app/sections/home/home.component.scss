@@ -1,0 +1,42 @@
+#section-home {
+  margin-top: 12.5rem;
+  .eligibility-block {
+    padding-top: 13rem;
+    display: flex;
+    gap: 2rem;
+    .col {
+      flex: 1;
+    }
+    .left-block {
+      padding: 0 12rem;
+      .home-header {
+        &-block {
+          letter-spacing: 2px;
+          margin-left: 5rem;
+          margin-bottom: 5rem;
+          &::after {
+            content: "";
+            display: inline-block;
+            border-radius: 13px;
+            opacity: 0.7;
+            width: 236px;
+            background-color: #000;
+            height: 0.8rem;
+          }
+        }
+        &-text {
+          font-size: 4rem;
+          font-weight: 200;
+          font-style: normal;
+        }
+      }
+
+      .client-interaction {
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
