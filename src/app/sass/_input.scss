@@ -1,0 +1,140 @@
+.form-control {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  &--inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &--relative {
+    position: relative;
+    .prefix {
+      position: absolute;
+      top: 39%;
+      font-size: 2.4rem;
+      font-weight: 400;
+    }
+    input {
+      padding-left: 2rem !important;
+    }
+  }
+  label:first-child {
+    // margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+  .rangeValue {
+    // margin-top: -10px;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1.6rem;
+  }
+  input[type="range"] {
+    color: transparent;
+    border: none;
+    background: transparent;
+    background-color: #663399;
+    height: 4px;
+    outline: none;
+
+    border-radius: 5rem;
+  }
+  input[type="number"] {
+    padding: 1rem 0;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    font-size: 2rem;
+    font-weight: 400;
+    &::before {
+      content: "$";
+      display: block;
+    }
+  }
+  .range-margin {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+
+  select {
+    border: none;
+    border-bottom: 1px solid;
+    padding: 1rem 0rem;
+    font-size: 2rem;
+    font-weight: 100;
+    outline: none;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    // width: 60px;
+    // height: 34px;
+    width: 35px;
+    height: 20px;
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      &:checked + .slider {
+        background-color: #663399;
+      }
+
+      &:focus + .slider {
+        box-shadow: 0 0 1px #663399;
+      }
+
+      &:checked + .slider:before {
+        -webkit-transform: translateX(16px);
+        -ms-transform: translateX(16px);
+        transform: translateX(16px);
+      }
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+      border-radius: 34px;
+      &:before {
+        position: absolute;
+        content: "";
+        height: 17px;
+        width: 17px;
+        left: 0px;
+        bottom: 1.5px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+input {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+
+
+
+
+
+

@@ -1,3 +1,24 @@
-.margin-left-1 {
-  margin-left: 1rem;
+.margin {
+  &-left {
+    &-1 {
+      margin-left: 1rem;
+    }
+  }
+  &-top {
+    &-large {
+      margin-top: 10rem;
+    }
+  }
+}
+
+ .bg-white {
+  background-color: #fff;
+  opacity: 1;
+}
+
+.text-white {
+  color: white;
+  &--dim {
+    opacity: 0.7;
+  }
 }

@@ -11,41 +11,101 @@
       </div>
     </div>
 
-    <div class="col">
+    <div class="col right-block">
       <div class="card">
-        <label for="">label for inputs</label>
-        <input type="text"><label for="">label for inputs</label>
-        <input type="text"><label for="">label for inputs</label>
-        <input type="text"><label for="">label for inputs</label>
-        <input type="text"><label for="">label for inputs</label>
-        <input type="text">
-        <button class="button button--secondary">Login</button>
+        <div class="card-header">
+          Eligibility Calculator
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-control">
+              <label for="monthlyIncome">Monthly income</label>
+              <span class="rangeValue">{{monthlyIncome|currency:'INR'}}</span>
+              <input name="monthlyIncome" type="range" step="5000" [value]="monthlyIncome" min="100000" max="1500000"
+                [(ngModel)]="monthlyIncome">
+              <span class="range-margin">
+                <span>
+                  {{"100000"|currency:'INR'}}
+                </span>
+                <span>
+                  {{"1500000"|currency:'INR'}}
+                </span>
+              </span>
+            </div>
+            <div class="form-control">
+              <label for="monthlyExpenses">Monthly Expenses</label>
+              <span class="rangeValue">{{monthlyExpenses|currency:'INR'}}</span>
+              <input name="monthlyExpenses" type="range" step="5000" min="100000" max="1500000"
+                [(ngModel)]="monthlyExpenses">
+            </div>
+            <div class="form-control">
+              <label for="repayment">Repayment Tenures</label>
+              <select name="repayment">
+                <option [value]="tenure" *ngFor="let tenure of repaymentTenuredList">{{tenure}}</option>
+              </select>
+            </div>
+            <div class="form-control form-control--inline">
+              <label for="isLoanExist">Do you have any loans?</label>
+              <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider"></span>
+              </label>
+            </div>
+            <div class="form-control form-control--relative">
+              <label for="emi">EMI of existing loans (optional)</label>
+              <span class="prefix">&#x20B9;</span>
+              <input name="emi" type="number">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="small-card">
+        <div class="card-body text-white">
+          <p class="text-small text-white--dim">Loan amount</p>
+          <p class="text-bold text-white">{{monthlyIncome|currency:'INR'}}</p>
+          <p class="text-small text-white--dim">Your EMI Will be</p>
+          <p class="text-bold text-white">{{monthlyExpenses|currency:'INR'}}</p>
+          <button class="button button--secondary bg-white">Get Money</button>
+        </div>
       </div>
     </div>
   </div>
-</section>
-<section id="section-home">
-  <div class="eligibility-block">
-    <div class="col left-block">
-      <div class="home-header-block">
-        <p class="home-header-text">
-          We make it Super <br> Simple
-        </p>
-      </div>
-      <div class="client-interaction">
-        <img src="assets/images/collect_img-video@2x.png" alt="">
+
+
+  <div class="booking-block margin-top-large">
+    <div class="col">
+      <div class="box-container">
+        <div class="col-box-even">
+          <ng-container *ngFor="let feature of featureList;let even = even;">
+            <div class="box" *ngIf="even">
+              <img [src]="feature.imgUrl" alt="">
+              <h2>{{feature.title}}</h2>
+              <p>{{feature.description}}</p>
+            </div>
+          </ng-container>
+        </div>
+        <div class="col-box-odd">
+          <ng-container *ngFor="let feature of featureList;let odd = odd;">
+            <div class="box" *ngIf="odd">
+              <img [src]="feature.imgUrl" alt="">
+              <h2>{{feature.title}}</h2>
+              <p>{{feature.description}}</p>
+            </div>
+          </ng-container>
+        </div>
       </div>
     </div>
-
     <div class="col">
-      <div class="card">
-        <label for="">label for inputs</label>
-        <input type="text"><label for="">label for inputs</label>
-        <input type="text"><label for="">label for inputs</label>
-        <input type="text"><label for="">label for inputs</label>
-        <input type="text"><label for="">label for inputs</label>
-        <input type="text">
-        <button class="button button--secondary">Login</button>
+      <div class="open-account">
+        <div class="home-header-block">
+          <p class="home-header-text">
+            Boost your business<br> with Open
+          </p>
+        </div>
+        <p class="open-account--info">
+          Get your hands on a term loan that’s<br> crafted for your business
+        </p>
+        <button class="button button--secondary open-account--button bg-white">Get an Open Account</button>
       </div>
     </div>
   </div>
