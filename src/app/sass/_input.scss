@@ -38,7 +38,7 @@
     background-color: #663399;
     height: 4px;
     outline: none;
-
+    // appearance: none;
     border-radius: 5rem;
   }
   input[type="number"] {
@@ -131,10 +131,5 @@ input {
     -moz-appearance: textfield;
   }
 }
-
-
-
-
-
 
 

@@ -1,5 +1,12 @@
 <section id="section-home">
   <div class="eligibility-block">
+    <div class="cirle-container--right">
+      <div class="circle circle--right"></div>
+
+    </div>
+    <div class="cirle-container--left">
+      <div class="circle circle--left"></div>
+    </div>
     <div class="col left-block">
       <div class="home-header-block">
         <p class="home-header-text">
@@ -8,10 +15,20 @@
       </div>
       <div class="client-interaction">
         <img src="assets/images/collect_img-video.png" alt="">
+        <div class="bubble-container">
+          <div class="bubble-group">
+            <div class="bubble" *ngFor="let item of [].constructor(84)"></div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="col right-block">
+      <div class="bubble-container">
+        <div class="bubble-group">
+          <div class="bubble" *ngFor="let item of [].constructor(84)"></div>
+        </div>
+      </div>
       <div class="card">
         <div class="card-header">
           Eligibility Calculator
@@ -59,6 +76,7 @@
           </form>
         </div>
       </div>
+
       <div class="small-card">
         <div class="card-body text-white">
           <p class="text-small text-white--dim">Loan amount</p>
@@ -105,8 +123,13 @@
         <p class="open-account--info">
           Get your hands on a term loan that’s<br> crafted for your business
         </p>
-        <button class="button button--secondary open-account--button bg-white">Get an Open Account</button>
+        <button class="button button--secondary open-account--button bg-transparent">Get an Open Account</button>
       </div>
     </div>
+    <svg width="1772" height="993" viewBox="0 0 1772 993" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 119.887L73.8333 236.393C147.667 351.807 295.333 442.642 443 441.824C590.667 442.642 738.333 351.807 886 308.97C1033.67 264.496 1350.34 311.675 1498.01 441.824C1676.42 551.636 1698.17 623.963 1772 683.171V905.689V993H1698.17C1624.33 993 1476.67 993 1329 993C1181.33 993 1033.67 993 886 993C738.333 993 590.667 993 443 993C295.333 993 147.667 993 73.8333 993H0V119.887Z" fill="#F4EAFF" fill-opacity="0.5"/>
+      </svg>
+
+
   </div>
 </section>
